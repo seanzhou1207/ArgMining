@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#SBATCH --job-name=KG
+#SBATCH --output=kg.out
+#SBATCH --partition=high
+#SBATCH --nodes=1          # use 1 node
+#SBATCH --ntasks=1         # use 1 task
+
+#python ./Code/1a_generate_neural_features.py A ./Data/TaskA_train.csv
+python ./Code/kg_feature.py A ./Data/TaskA_train.csv ./property/propertyCatagories.txt
+
+
